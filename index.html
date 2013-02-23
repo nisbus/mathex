@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Mathex : Extra math function for Erlang " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Mathex</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/nisbus/mathex">View on GitHub</a>
+
+          <h1 id="project_title">Mathex</h1>
+          <h2 id="project_tagline">Extra math function for Erlang </h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/nisbus/mathex/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/nisbus/mathex/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>Welcome to Mathex.</h3>
+
+<p>Mathex is a library of mathematical functions for Erlang.</p>
+
+<p>This library contains the following functions:</p>
+
+<h2>Return a single value</h2>
+
+<ul>
+<li>average<br>
+</li>
+<li>sum<br>
+</li>
+<li>stdev_sample<br>
+</li>
+<li>stdev_population<br>
+</li>
+<li>skew<br>
+</li>
+<li>kurtosis<br>
+</li>
+<li>variance<br>
+</li>
+<li>covariance<br>
+</li>
+</ul><h2>Return a list of values</h2>
+
+<ul>
+<li>moving_average<br>
+</li>
+<li>correlation<br>
+</li>
+<li>correlation_matrix </li>
+</ul><p>Most of these are well documented elsewhere except maybe the<br>
+correlation_matrix.<br>
+The correlation matrix will take in a list of numeric lists<br>
+and correlate each list in the collection with all the other lists<br>
+of the collection.<br>
+The result will look like this:  </p>
+
+<div class="highlight"><pre><span class="p">[{</span><span class="n">integer</span><span class="p">(),</span><span class="n">integer</span><span class="p">(),</span><span class="nb">float</span><span class="p">()},</span>
+ <span class="p">{</span><span class="n">integer</span><span class="p">(),</span><span class="n">integer</span><span class="p">(),</span><span class="nb">float</span><span class="p">()},</span>
+ <span class="p">{</span><span class="n">integer</span><span class="p">(),</span><span class="n">integer</span><span class="p">(),</span><span class="nb">float</span><span class="p">()},</span>
+ <span class="p">{</span><span class="n">integer</span><span class="p">(),</span><span class="n">integer</span><span class="p">(),</span><span class="nb">float</span><span class="p">()}]</span>
+</pre></div>
+
+<p>Where the first int is the index of a list in the collection and the<br>
+second integer the index of the list it's being correlated to.<br>
+The float is the correlation of the two.<br>
+It will give you all possible combinations and their correlation.  </p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Mathex maintained by <a href="https://github.com/nisbus">nisbus</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
