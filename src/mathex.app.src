@@ -1,0 +1,11 @@
+{application, mathex,
+ [
+  {description, "Some additional math functions to complement the built in math lib"},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {env, []}
+ ]}.
