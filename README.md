@@ -1,6 +1,6 @@
 mathex
 ======
-[![Build Status](https://travis-ci.org/nisbus/mathex.png?branch=master)](https://travis-ci.org/nisbus/mathex) 
+[![Build Status](https://api.travis-ci.org/nisbus/mathex.png?branch=master)](https://api.travis-ci.org/nisbus/mathex.png?branch=master) 
 
 Extra math functions for Erlang
 
