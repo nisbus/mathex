@@ -43,12 +43,12 @@ The float is the correlation of the two.
 It will give you all possible combinations and their correlation.  
   
   
-#To Do
+# To Do  
 Add a sort function to return the correlation_matrix sorted desc/asc.  
 Add more functions.  
 Add unit tests.  
 Add more documentation.  
   
   
-##Documentation  
+## Documentation  
 Check out the [gh-pages](http://nisbus.github.com/mathex)
