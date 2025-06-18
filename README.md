@@ -46,9 +46,29 @@ It will give you all possible combinations and their correlation.
 # To Do  
 Add a sort function to return the correlation_matrix sorted desc/asc.  
 Add more functions.  
-Add unit tests.  
-Add more documentation.  
-  
-  
-## Documentation  
+Add unit tests.
+Add more documentation.
+
+## MCP server and client
+
+This project exposes the statistics functions over a minimal line-based TCP
+protocol.  The easiest way to run the server is via Docker:
+
+```bash
+docker build -t mathex .
+docker run -p 4040:4040 mathex
+```
+
+Once running, you can query the server without any Erlang knowledge by using
+the provided Python script:
+
+```bash
+python3 tools/mcp_client.py sum 1 2 3
+```
+
+The client connects to `localhost:4040` by default and prints the result of the
+requested function.
+
+
+## Documentation
 Check out the [gh-pages](http://nisbus.github.com/mathex)

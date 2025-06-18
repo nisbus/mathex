@@ -16,3 +16,6 @@
 /doc/*
 *.trace
 *~
+_build/
+rebar.lock
+__pycache__/
