@@ -2,7 +2,13 @@ mathex
 ======
 [![Build Status](https://api.travis-ci.org/nisbus/mathex.png?branch=master)](https://api.travis-ci.org/nisbus/mathex.png?branch=master) 
 
-Extra math functions for Erlang
+Extra math and statistics functions for Erlang.
+The library provides calculations such as moving averages,
+standard deviation, skewness, kurtosis and correlation.
+
+The API can be used standalone from any Erlang application.
+All functions operate on lists of numbers and return either a single
+value or a list of values.
 
 This library contains the following functions:
 
@@ -43,11 +49,16 @@ The float is the correlation of the two.
 It will give you all possible combinations and their correlation.  
   
   
-# To Do  
-Add a sort function to return the correlation_matrix sorted desc/asc.  
-Add more functions.  
-Add unit tests.  
-Add more documentation.  
+
+## Running tests
+
+EUnit tests are included and can be executed with:
+
+```bash
+rebar3 eunit
+```
+
+The tests cover the public API and a few edge cases.
   
   
 ## Documentation  
