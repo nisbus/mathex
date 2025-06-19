@@ -26,8 +26,12 @@ This library contains the following functions:
 ## Return a list of values  
   
 * moving_average  
-* correlation   
-* correlation_matrix 
+* correlation
+* correlation_matrix
+
+In addition to statistics, mathex can parse and evaluate simple algebraic
+expressions.  See `mathex_calc:eval/1` for evaluating a string expression and
+`mathex_calc:calculate/1` for applying an expression to a list of dated values.
   
 Most of these are well documented elsewhere except maybe the  
 correlation_matrix.  
