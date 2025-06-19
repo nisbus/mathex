@@ -15,18 +15,21 @@ def parse_args():
 
 def main():
     opts = parse_args()
-    numbers = []
-    for a in opts.args:
-        try:
-            if "." in a:
-                numbers.append(float(a))
-            else:
-                numbers.append(int(a))
-        except ValueError:
-            sys.stderr.write(f"invalid number: {a}\n")
-            return 1
-
-    term = f"{{{opts.function},[{','.join(map(str, numbers))}]}}.\n"
+    if opts.function == "calc":
+        expr = " ".join(opts.args)
+        term = f"{{calc,\"{expr}\"}}.\n"
+    else:
+        numbers = []
+        for a in opts.args:
+            try:
+                if "." in a:
+                    numbers.append(float(a))
+                else:
+                    numbers.append(int(a))
+            except ValueError:
+                sys.stderr.write(f"invalid number: {a}\n")
+                return 1
+        term = f"{{{opts.function},[{','.join(map(str, numbers))}]}}.\n"
     with socket.create_connection((opts.host, opts.port)) as s:
         s.sendall(term.encode())
         resp = s.recv(4096).decode().strip()

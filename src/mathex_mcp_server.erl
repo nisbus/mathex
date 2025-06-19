@@ -42,6 +42,12 @@ loop(Socket) ->
 handle_request(Line) ->
     Str = binary_to_list(Line),
     case parse_term(Str) of
+        {ok, {calc, Expr}} ->
+            Result = (catch mathex_calc:eval(Expr)),
+            io_lib:format("~p", [Result]);
+        {ok, {calculate, Series}} ->
+            Result = (catch mathex_calc:calculate(Series)),
+            io_lib:format("~p", [Result]);
         {ok, {Func, Args}} ->
             Result = (catch apply(mathex, Func, Args)),
             io_lib:format("~p", [Result]);

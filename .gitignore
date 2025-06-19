@@ -19,3 +19,5 @@
 _build/
 rebar.lock
 __pycache__/
+src/calc_lexer.erl
+src/calc_parser.erl

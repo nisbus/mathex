@@ -29,6 +29,10 @@ This library contains the following functions:
 * correlation
 * correlation_matrix
 
+In addition to statistics, mathex can parse and evaluate simple algebraic
+expressions.  See `mathex_calc:eval/1` for evaluating a string expression and
+`mathex_calc:calculate/1` for applying an expression to a list of dated values.
+
 Most of these are well documented elsewhere except maybe the
 correlation_matrix.
 The correlation matrix will take in a list of numeric lists
@@ -56,8 +60,8 @@ Add more documentation.
 
 ## MCP server and client
 
-This project exposes the statistics functions over a minimal line-based TCP
-protocol.  The easiest way to run the server is via Docker:
+This project exposes the statistics and calculator functions over a minimal
+line-based TCP protocol. The easiest way to run the server is via Docker:
 
 ```bash
 docker build -t mathex .
@@ -69,10 +73,11 @@ the provided Python script:
 
 ```bash
 python3 tools/mcp_client.py sum 1 2 3
+python3 tools/mcp_client.py calc "5+5"
 ```
 
 The client connects to `localhost:4040` by default and prints the result of the
-requested function.
+requested function or expression.
 
 ## Running tests
 
