@@ -16,3 +16,7 @@
 /doc/*
 *.trace
 *~
+_build/
+rebar.lock
+src/calc_lexer.erl
+src/calc_parser.erl
