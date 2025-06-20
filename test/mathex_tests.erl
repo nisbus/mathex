@@ -41,10 +41,10 @@ single_element_safe_test() ->
     ?assertEqual(0.0, mathex:correlation([1],[1])).
 
 calc_eval_test() ->
-    ?assertEqual(10.0, mathex_calc:eval("5+5")).
+    ?assertEqual(10.0, mathex_calc:calc("5+5")).
 
 calc_series_test() ->
     D1 = {{2024,1,1},{0,0,0}},
     D2 = {{2024,1,2},{0,0,0}},
-    Series = mathex_calc:calculate([{D1,"1+1"},{D2,"2*3"}]),
+    Series = mathex_calc:calc_series([{D1,"1+1"},{D2,"2*3"}]),
     ?assertEqual([{D1,2.0},{D2,6.0}], Series).
