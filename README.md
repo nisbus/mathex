@@ -30,8 +30,8 @@ This library contains the following functions:
 * correlation_matrix
 
 In addition to statistics, mathex can parse and evaluate simple algebraic
-expressions.  See `mathex_calc:eval/1` for evaluating a string expression and
-`mathex_calc:calculate/1` for applying an expression to a list of dated values.
+expressions.  See `mathex_calc:calc/1` for evaluating a string expression and
+`mathex_calc:calc_series/1` for applying an expression to a list of dated values.
   
 Most of these are well documented elsewhere except maybe the  
 correlation_matrix.  

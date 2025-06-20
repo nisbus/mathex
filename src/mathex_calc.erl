@@ -7,7 +7,7 @@
 -module(mathex_calc).
 
 %% API
--export([eval/1, calculate/1]).
+-export([eval/1, calc/1, calc_series/1]).
 
 %%--------------------------------------------------------------------
 %% @doc Evaluate an algebraic expression represented as a string.
@@ -19,11 +19,18 @@ eval(Algebra) ->
     Result.
 
 %%--------------------------------------------------------------------
+%% @doc Calculate a math expression and return the result.
+-spec calc(string()) -> float().
+%%--------------------------------------------------------------------
+calc(Expr) ->
+    eval(Expr).
+
+%%--------------------------------------------------------------------
 %% @doc Evaluate a list of {Date, Expression} tuples.
--spec calculate([{calendar:datetime(), string()}]) ->
+-spec calc_series([{calendar:datetime(), string()}]) ->
                  [{calendar:datetime(), float()}].
 %%--------------------------------------------------------------------
-calculate(Series) ->
+calc_series(Series) ->
     lists:map(fun({Date, Expr}) ->
                       {Date, eval(Expr)}
               end, Series).
